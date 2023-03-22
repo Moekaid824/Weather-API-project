@@ -7,7 +7,7 @@ const highTemp = document.querySelector(".high-temp")
 const lowTemp = document.querySelector(".low-temp")
 const humidityValue = document.querySelector("#humidity-value")
 
-const API_KEY = "b2a85b615bec4abd0009f6a6025842d8"
+
 
 
 form.addEventListener("submit", (event) => {
