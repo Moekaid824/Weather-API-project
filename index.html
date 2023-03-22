@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <img src="https://imgs.search.brave.com/0iFXlShiKuXUYb8rq8ai9fZk8ExQgnWeRq8Zv2WSIrk/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/c2FnYS5jby51ay9j/b250ZW50bGlicmFy/eS9zYWdhL3B1Ymxp/c2hpbmcvdmVydGlj/YWxzL3RlY2hub2xv/Z3kvYXBwcy9zaHV0/dGVyc3RvY2tfMjQw/NDU5NzUxLmpwZw"
+</head>
+<body>
+    <h1>Weather Forecast</h1>
+    <form id="weather-form">
+        
+        <label for="weather-form">Enter a City & State</label>
+        <br>
+        <input type="text" id="City-name" name="cityName">
+        <br>
+        <input type="text" id="State-name" name="stateName">
+        <br>
+        <button type="submit">Submit</button>
+        <form>
+<div id="weather-data"></div>
+
+<div class="weather-box">
+    <p class="high-temp"></p>
+    <p class="low-temp"></p>
+</div>
+
+<div class="weather-details">
+    <div class="humidity">
+        <div class="text">
+        </div>
+        </div class="value">
+        <p id="humiidity-value"></p>
+    </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
+</body>
+</html>

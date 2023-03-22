@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input{
+    text-align: center;
+}
+
+input[type="text"]{
+    height: 50px;
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 2px;
+    padding: 10px 10px;
+}
+
+input[type="submit"]{
+    height: 50px;
+    width: 100px;
+    background: lightblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+.display{
+    text-align: center;
+}
+
+#weather-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    background-image: no-repeat;
+    background-size: auto;
+}
+
