@@ -12,6 +12,16 @@ body{
     text-align: center;
 }
 
+h1 {
+    color:white;
+    text-align: center;
+}
+
+h5 {
+    color:white;
+    text-align: center;
+}
+
 input[type="text"]{
     height: 50px;
     width: 600px;
@@ -45,8 +55,11 @@ input[type="submit"]{
     align-items: center;
 }
 
-html {
-    background-image: no-repeat;
-    background-size: auto;
+body {
+   margin: 0;
+   padding: 0;
+   background-image: url("https://imgs.search.brave.com/0iFXlShiKuXUYb8rq8ai9fZk8ExQgnWeRq8Zv2WSIrk/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/c2FnYS5jby51ay9j/b250ZW50bGlicmFy/eS9zYWdhL3B1Ymxp/c2hpbmcvdmVydGlj/YWxzL3RlY2hub2xv/Z3kvYXBwcy9zaHV0/dGVyc3RvY2tfMjQw/NDU5NzUxLmpwZw");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
 }
-

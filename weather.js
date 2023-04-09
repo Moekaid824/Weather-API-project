@@ -33,59 +33,31 @@ async function getLatLog (city,state,API_KEY) {
 
 
 
-async function weatherData(lat,long,API_KEY) {
+async function weatherData(lat,long) {
     
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=imperial&appid=${API_KEY}`
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=imperial&appid=257eccfe65f2b0925057e706c7aa23e4`
 const response = await fetch(url)
 const data = await response.json()
 console.log(data)
 displayWeatherData(data)
 }
-
+//takes the data from our api above to display the current, high, low, and humidity temperatures
 function displayWeatherData(data) {
+const CurrentTemp = data.current.temp;
+const HighTemp = data.daily[0].temp.max;
+const LowTemp = data.daily[0].temp.min;
+const humidity = data.current.humidity;
 
 
-
-
-    dataDiv.innerHTML =`<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">High-Temp: </li>
-      <li class="list-group-item">Low-Temp: </li>
-      <li class="list-group-item">Humidity: </li>
-    </ul>
-  </div>`
-
-
+//displays our data via our bootstrap card
+  dataDiv.innerHTML =`
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h2 class="card-title">Weather Data:</h2>
+      <li class="list-group-item">Current Temp: ${CurrentTemp}&deg;F</li>
+      <li class="list-group-item">High-Temp: ${HighTemp}&deg;F</li>
+      <li class="list-group-item">Low-Temp: ${LowTemp}&deg;F</li>
+      <li class="list-group-item">Humidity: ${humidity}%</li>
+    </div>
+  </div>`;
 }
-// button.addEventListener('click', function(name){
-// fetch('http://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&APPID=b2a85b615bec4abd0009f6a6025842d8')
-// .then(response => response.json())
-// .then(data => {
-//     var nameValue = data['name'];
-//     var temperaturesValue = data['main']['temperatures'];
-//     var descriptionValue = data['weather'][0]['description'];
-
-//     name.innerHTML = nameValue;
-//     temperatures.innerHTML =temperaturesValue;
-//     descriptionValue.innerHTML = descriptionValue
-//     inputValue.value="";
-// })
-
-// .catch(err => alert("Incorrect City!"))
-// })
-
-
-
-
-
-
-
-
-
-
-
-// var button= document.querySelector('.button')
-// var inputValue= document.querySelector('.inputValue')
-// var name= document.querySelector('.name');
-// var description= document.querySelector('.description');
-// var temperatures= document.querySelector('.temperatures');
