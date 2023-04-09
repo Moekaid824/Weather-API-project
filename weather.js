@@ -35,7 +35,7 @@ async function getLatLog (city,state,API_KEY) {
 
 async function weatherData(lat,long) {
     
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=imperial&appid=257eccfe65f2b0925057e706c7aa23e4`
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=imperial&appid=`
 const response = await fetch(url)
 const data = await response.json()
 console.log(data)
