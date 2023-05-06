@@ -7,8 +7,7 @@ const highTemp = document.querySelector(".high-temp")
 const lowTemp = document.querySelector(".low-temp")
 const humidityValue = document.querySelector("#humidity-value")
 
-
-
+const API_KEY = "HIDDEN_API_KEY"
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -31,11 +30,9 @@ async function getLatLog (city,state,API_KEY) {
     weatherData(lat,long)
 }
 
-
-
 async function weatherData(lat,long) {
     
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=imperial&appid=`
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=imperial&appid=HIDDEN_API_KEY`
 const response = await fetch(url)
 const data = await response.json()
 console.log(data)
